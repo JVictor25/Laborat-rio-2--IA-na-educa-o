@@ -1,11 +1,11 @@
 learner:
-  description: "Schema for a single learner’s profile and performance data"
+  description: "Esquema para um usuário que quer aprender mais sobre áreas do basquete, dependendo do seu nível de conhecimento"
   type: dict
   properties:
     id:
       type: string
       description: "Unique identifier for the learner (e.g., UUID or incremental ID)"
-      example: "learner_001"
+      example: "aluno_001"
     answers:
       type: dict
       description: "Learner's answers to questions (key: question ID, value: A/B/C/D/E)"
