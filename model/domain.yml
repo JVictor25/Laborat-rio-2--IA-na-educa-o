@@ -1,142 +1,38 @@
 Basquete:
-  Fundamentos:
-    Regras do Jogo:
-      - Duração da Partida:
-        - 4 Quartos de 12 minutos (NBA)
-        - 4 Quartos de 10 minutos (FIBA)
-        - Intervalos e Descanso
-      - Tamanho da Quadra:
-        - Dimensões oficiais: 28,65 metros de comprimento e 15,24 metros de largura (NBA)
-        - Linhas importantes: Linha de 3 pontos, Linha de lance livre, Linha de meio de quadra
-      - Como Marcar Pontos:
-        - 2 pontos: Arremessos dentro da linha de 3 pontos
-        - 3 pontos: Arremessos além da linha de 3 pontos
-        - Lances livres: 1 ponto por acerto (após falta)
-      - Faltas e Penalidades:
-        - Faltas pessoais (limite de 5 ou 6 dependendo da liga)
-        - Faltas técnicas (jogador ou equipe)
-        - Faltas antidesportivas (em caso de contato excessivo ou agressivo)
-        - Faltas em situação de arremesso (resultam em lances livres)
-        - Violação de 24 segundos (time para arremesso)
-        - Violação de 8 segundos (para avançar a bola após a posse)
-        - Passos e Viajar (violação ao dar mais de dois passos sem driblar)
-    Posicionamento e Posições:
-      - Posições no Basquete:
-        - Armador (PG - Point Guard): Principal responsável por organizar o jogo
-        - Ala-armador (SG - Shooting Guard): Especialista em arremessos de média e longa distância
-        - Ala (SF - Small Forward): Jogador versátil, bom tanto no ataque quanto na defesa
-        - Power Forward (PF): Jogador de força, geralmente atua perto do garrafão
-        - Centro (C - Center): Principal jogador de defesa e rebotes, fica na área do garrafão
-      - Movimentos e Habilidades:
-        - Drible:
-          - Drible baixo e controlado
-          - Drible cruzado
-          - Drible com ambas as mãos
-        - Passes:
-          - Passe de peito
-          - Passe picado
-          - Passe de mão única
-        - Arremessos:
-          - Arremesso de 2 pontos
-          - Arremesso de 3 pontos
-          - Lances livres
-        - Movimentos Específicos:
-          - Stepback: Movimento em que o jogador dá um passo para trás antes de arremessar, criando espaço para o arremesso
-          - Eurostep: Movimento de drible com passos rápidos para mudar a direção e desviar da defesa ao tentar um layup
-          - Spin Move: Giro rápido para mudar de direção, usando o corpo para proteger a bola
-          - Finger Roll: Arremesso suave ao redor do aro com a ponta dos dedos
-          - Fadeaway: Arremesso feito ao saltar para trás, criando espaço e dificultando a defesa
-    Estatísticas e Desempenho:
-      - Triplo-duplo:
-        - Definição: Quando um jogador atinge 10 ou mais em três categorias estatísticas (pontos, assistências, rebotes, roubos de bola, ou bloqueios) em um único jogo
-        - Exemplo: 10 pontos, 10 assistências e 10 rebotes
-      - Estatísticas Comuns:
-        - Pontos por Jogo (PPG): Total de pontos marcados em média por jogo
-        - Assistências por Jogo (APG): Média de assistências fornecidas por jogo
-        - Rebotes por Jogo (RPG): Média de rebotes capturados por jogo
-        - Roubos de Bola (SPG): Quantidade de bolas roubadas por jogo
-        - Bloqueios (BPG): Quantidade de arremessos bloqueados por jogo
-        - Eficiência de Jogador (PER): Estatística avançada que mede a eficiência geral de um jogador
-    Táticas e Estratégias:
-      - Ataque:
-        - Ataque Rápido:
-          - Transição ofensiva
-          - Movimentação sem bola para criar espaço
-          - Corrida para contra-ataques rápidos
-        - Jogo Organizado:
-          - Jogadas ensaiadas (ex: Pick and Roll)
-          - Movimentação no garrafão (pivôs, cortadores)
-          - Jogo no perímetro (arremessos de 3 pontos e passes rápidos)
-      - Defesa:
-        - Defesa Individual:
-          - Pressão constante sobre o portador da bola
-          - Bloqueio de arremessos e passes
-        - Defesa por Zona:
-          - Zona 2-3: Dois jogadores na linha dos três pontos, três no garrafão
-          - Zona 1-3-1: Defensores posicionados para cobrir a linha de três pontos e o garrafão
-          - Zona 3-2: Pressão sobre os arremessos de três pontos, mas proteção do garrafão
-        - Defesa no Perímetro:
-          - Marcação de arremessadores de 3 pontos
-          - Defesa contra dribles e infiltrações
-    Treinamento:
-      - Preparação Física:
-        - Condicionamento Cardiovascular:
-          - Corridas de resistência
-          - Sprints para melhorar a aceleração
-        - Força e Potência:
-          - Treinamento de musculação
-          - Pulos e saltos para explosão e saltos altos
-        - Agilidade e Velocidade:
-          - Circuitos de agilidade
-          - Treinamento de mudança rápida de direção
-      - Habilidades Técnicas:
-        - Dribles Avançados:
-          - And1 Moves (movimentos técnicos de destaque)
-          - Dribles de ruptura para arremessos ou passes
-        - Arremessos em Movimento:
-          - Arremessos de 3 pontos após drible
-          - Arremessos após uso de bloqueios
-        - Defesa:
-          - Marcação e bloqueios de arremessos
-          - Defesa de 1 contra 1 e roubo de bola
-      - Aspectos Psicológicos:
-        - Foco e Concentração:
-          - Técnicas de mindfulness para controle da ansiedade
-          - Estratégias de visualização para melhorar o desempenho
-        - Liderança e Trabalho em Equipe:
-          - Comunicação em quadra
-          - Motivação e incentivo mútuo entre os jogadores
-  História e Cultura:
-    História do Basquete:
-      - Criação do Basquete:
-        - James Naismith e as origens do esporte
-        - Como as regras evoluíram ao longo dos anos
-      - Grandes Jogadores:
-        - Michael Jordan (legado e impacto)
-        - LeBron James (atualmente e impacto na NBA)
-        - Kobe Bryant (estilo de jogo e contribuição)
-    Competições:
-      - NBA:
-        - Estrutura da Liga (Temporada Regular, Playoffs, Finais)
-        - Recordes e estatísticas históricas
-        - Conquistas: MVPs, Campeões, Times All-Star
-      - Competições Internacionais:
-        - Jogos Olímpicos (Seleção dos EUA e seleções globais)
-        - Copa do Mundo FIBA
-        - Liga ACB (Espanha) e outras ligas internacionais
-
-
-
-
-
-- Tempo de Jogo
-- Infrações
-- Faltas
-- Pontuação
-- Posições
-- Estatística
-- Fundamentos
-- Tipos de defesa
-- Tipos de ataque
-- História (Origem)
+ Tempo do jogo:
+         - Duração da Partida: 4 períodos de 10 minutos (FIBA) e 4 Quartos de 12 minutos (NBA) 
+         - Pedidos de tempo, intervalo
+         - Prorrogação
+ Infrações
+         - Driblar a bola para se locomover
+         - Recolher o drible e driblar novamente
+         - 3 segundos no garrafão
+ Faltas
+       - Os diferentes tipos de falta (pessoais, técnicas, antidesportivas e flagrantes)
+       - Tipos de faltas pessoais
+       - Limite de faltas
+ Pontuação:
+       - Cestas de 2 e 3 pontos
+       - Lances livres
+       - Cesta e falta
+ Posições:
+       - Identificação das 5 posições do esporte
+       - Visão geral do papel de cada uma
+       - Especificidades de cada posição
+ Estatística
+       - Estatísticas principais: Pontos, Rebotes, Assistências.
+       - Semi principais: Roubos de bola, Tocos e Tentativas de arremesso
+       - Avançadas: Box Plus/Minus, PER.
+ Fundamentos
+      - Drible, arremesso, bandeja e passe
+      - Fundamentos de defesa
+      - Técnicas refinadas (stepback, eurostep)
+ Tipos de ataque
+     - Jogo coletivo e individual
+     - Sistemas ofensivos
+     - Papeis ofensivos
+ Tipos de defesa
+    - Defesa zona e individual
+    - Tipos de defesa zona
+    - Dicas avançadas
 
