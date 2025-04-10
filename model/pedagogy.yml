@@ -1,116 +1,72 @@
-feedback_types:
+its_basquete_pedagogy: 
+  description: "Sistema inteligente de ensino adaptativo sobre basquete. Avalia o nível do aluno, adapta os questionários e fornece feedback pedagógico baseado em desempenho."
 
-  - name: "autonomy"
-    description: "Encourages learners to take control of their learning by exploring topics independently or setting their own goals."
-    message: "You're making steady progress in {item}. Consider exploring it further on your own to deepen your understanding."
-
-  - name: "competence"
-    description: "Affirms the learner's ability to master the material, highlighting progress and strengths."
-    message: "You're showing great competence in {item}! Keep up the excellent work."
-
-  - name: "relatedness"
-    description: "Makes the learner feel connected and supported, normalizing struggles and suggesting collaboration."
-    message: "Many students find {item} challenging. You're not alone—let's tackle this together."
-
-  - name: "urgent"
-    description: "Indicates a need for immediate attention to foundational concepts due to struggles with easy questions."
-    message: "Urgent: You struggled with easy questions in {item}. Let's review the basics to build a stronger foundation."
-
-  - name: "review"
-    description: "Suggests revisiting the topic to strengthen understanding, especially for more challenging concepts."
-    message: "Consider reviewing {item}, especially the harder concepts, to improve your mastery."
-
-
-feedback_rules:
-
-  - name: "Relatedness for low topic performance"
-    condition:
-      type: "less_than"
-      left: "performance.topics[topic].percent_correct"
-      right: 50.0
+  onboarding:
+    question: "Em uma escala de 1 a 10, qual é o seu nível de conhecimento sobre basquete?"
     action:
-      feedback_relatedness[topic]: 1
-    description: "Flags relatedness feedback if topic performance is below 50%"
+      type: "routing"
+      logic:
+        - condition:
+            type: "less_than_or_equal"
+            left: "self_assessed_level"
+            right: 3
+          route_to: "questionario_facil"
+        - condition:
+            type: "greater_than"
+            left: "self_assessed_level"
+            right: 3
+          route_to: "questionario_medio"
 
-  - name: "Competence for high topic performance"
-    condition:
-      type: "greater_than"
-      left: "performance.topics[topic].percent_correct"
-      right: 80.0
-    action:
-      feedback_competence[topic]: 1
-    description: "Flags competence feedback if topic performance exceeds 80%"
+  progression_rules:
+    - name: "Progredir para próximo nível"
+      condition:
+        type: "greater_than_or_equal"
+        left: "questionario.score_percent"
+        right: 80.0
+      action:
+        type: "next_questionario"
+        logic:
+          - current: "questionario_facil"
+            next: "questionario_medio"
+          - current: "questionario_medio"
+            next: "questionario_dificil"
+          - current: "questionario_dificil"
+            next: "encerrar"
 
-  - name: "Autonomy for moderate topic performance"
-    condition:
-      type: "and"
-      conditions:
-        - type: "greater_than_or_equal"
-          left: "performance.topics[topic].percent_correct"
-          right: 50.0
-        - type: "less_than_or_equal"
-          left: "performance.topics[topic].percent_correct"
-          right: 80.0
-    action:
-      feedback_autonomy[topic]: 1
-    description: "Flags autonomy feedback if topic performance is between 50% and 80%"
+    - name: "Feedback se não atingir 80%"
+      condition:
+        type: "less_than"
+        left: "questionario.score_percent"
+        right: 80.0
+      action:
+        type: "send_feedback_text"
+        source: "questionario.feedback_text"
 
-  - name: "Relatedness for low area performance"
-    condition:
-      type: "less_than"
-      left: "performance.areas[area].percent_correct"
-      right: 50.0
-    action:
-      feedback_relatedness[area]: 1
-    description: "Flags relatedness feedback if area performance is below 50%"
+  feedback_types:
+    - name: "competence"
+      description: "Reforça o senso de competência ao reconhecer bons resultados."
+      message: "Você demonstrou grande competência em {item}! Continue assim."
 
-  - name: "Competence for high area performance"
-    condition:
-      type: "greater_than"
-      left: "performance.areas[area].percent_correct"
-      right: 80.0
-    action:
-      feedback_competence[area]: 1
-    description: "Flags competence feedback if area performance exceeds 80%"
+    - name: "review"
+      description: "Sugere revisão de tópicos onde o aluno errou a única questão."
+      message: "Considere revisar o conteúdo de {item}. Você poderá melhorar muito com uma nova leitura!"
 
-  - name: "Autonomy for moderate area performance"
-    condition:
-      type: "and"
-      conditions:
-        - type: "greater_than_or_equal"
-          left: "performance.areas[area].percent_correct"
-          right: 50.0
-        - type: "less_than_or_equal"
-          left: "performance.areas[area].percent_correct"
-          right: 80.0
-    action:
-      feedback_autonomy[area]: 1
-    description: "Flags autonomy feedback if area performance is between 50% and 80%"
+  feedback_rules:
+    - name: "Acerto no tópico → Competence"
+      condition:
+        type: "equal"
+        left: "performance.topics[topic].correct"
+        right: true
+      action:
+        feedback_competence[topic]: 1
+      description: "Parabeniza o aluno se acertar a única questão do tópico"
 
-  - name: "Urgent topic focus due to easy question failure"
-    condition:
-      type: "and"
-      conditions:
-        - type: "greater_than"
-          left: "performance.topics[topic].difficulty_breakdown.easy"
-          right: 0
-        - type: "less_than"
-          left: "performance.topics[topic].percent_correct"
-          right: 50.0
-    action:
-      feedback_urgent[topic]: 1
-    description: "Flags urgent focus if easy questions exist and topic performance is below 50%"
+    - name: "Erro no tópico → Review"
+      condition:
+        type: "equal"
+        left: "performance.topics[topic].correct"
+        right: false
+      action:
+        feedback_review[topic]: 1
+      description: "Sugere revisão se o aluno errar a única questão do tópico"
 
-  - name: "Review topic due to hard question weakness"
-    condition:
-      type: "and"
-      conditions:
-        - type: "greater_than"
-          left: "performance.topics[topic].difficulty_breakdown.hard"
-          right: 0
-        - type: "less_than"
-          left: "performance.topics[topic].percent_correct"
-          right: 70.0
-    action:
-      feedback_review[topic]: 1
-    description: "Flags review if hard questions exist and topic performance is below 70%"
