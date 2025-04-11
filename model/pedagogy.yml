@@ -1,6 +1,6 @@
 its_basquete_pedagogy: 
   description: "Sistema inteligente de ensino adaptativo sobre basquete. Avalia o nível do aluno, adapta os questionários e fornece feedback pedagógico baseado em desempenho."
-
+ 
   onboarding:
     question: "Em uma escala de 1 a 10, qual é o seu nível de conhecimento sobre basquete?"
     action:
